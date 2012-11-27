@@ -49,3 +49,7 @@ services:
 		class: Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper
 		tags:
 			Symfony\Component\Console\Helper\HelperInterface: db
+
+	doctrine.consoleCommandSet:
+		class: NetteCli\DoctrineCommandSet
+		tags: [ NetteCli\CommandSet ]

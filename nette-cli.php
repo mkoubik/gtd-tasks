@@ -12,5 +12,10 @@ foreach ($container->findByTag('Symfony\Component\Console\Helper\HelperInterface
 $cli = new Application(Framework::NAME . ' Command Line Interface', Framework::VERSION);
 $cli->setCatchExceptions(TRUE);
 $cli->setHelperSet($helperSet);
-Doctrine\ORM\Tools\Console\ConsoleRunner::addCommands($cli);
+
+foreach ($container->findByTag('NetteCli\CommandSet') as $service => $meta) {
+	$commandSet = $container->getService($service);
+	$commandSet->addCommands($cli);
+}
+
 $cli->run();
