@@ -29,5 +29,10 @@ services:
 	routerFactory: App\RouterFactory
 	router: @routerFactory::createRouter
 
+	cli.helperSet:
+		class: Symfony\Component\Console\Helper\HelperSet
+		setup:
+			- set(@doctrine.entityManagerConsoleHelper, em)
+			- set(@doctrine.connectionConsoleHelper, db)
 
 factories:

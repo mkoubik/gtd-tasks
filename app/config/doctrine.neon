@@ -9,6 +9,10 @@ services:
 		class: Doctrine\ORM\EntityManager
 		factory: Doctrine\ORM\EntityManager::create(%doctrine.database%, @doctrine.configuration)
 
+	doctrine.connection:
+		class: Doctrine\DBAL\Connection
+		factory: @doctrine.entityManager::getConnection()
+
 	doctrine.configuration:
 		class: Doctrine\ORM\Configuration
 		setup:
@@ -35,3 +39,7 @@ services:
 		class: Doctrine\Common\Cache\ArrayCache
 		setup:
 			- setNamespace(::md5(%doctrine.proxyDir%))
+
+	doctrine.entityManagerConsoleHelper: Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper
+
+	doctrine.connectionConsoleHelper: Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper
