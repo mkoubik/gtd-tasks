@@ -3,6 +3,7 @@ parameters:
 		entityPaths: [ %appDir%/model/entities ]
 		proxyDir: %tempDir%/cache/_Doctrine.ORM.Proxy
 		autogenerateProxyClasses: %debugMode%
+		useSimpleAnnotationReader: TRUE
 		migrations:
 			name: Migrations
 			directory: %appDir%/migrations
@@ -27,18 +28,7 @@ services:
 			- setProxyDir(%doctrine.proxyDir%)
 			- setProxyNamespace(DoctrineProxies)
 			- setAutogenerateProxyClasses(%doctrine.autogenerateProxyClasses%)
-			- setMetadataDriverImpl(@doctrine.metadataDriver)
-
-	doctrine.metadataDriver: @doctrine.annotationDriver
-
-	doctrine.annotationDriver: Doctrine\ORM\Mapping\Driver\AnnotationDriver(@doctrine.cachedAnnotationReader, %doctrine.entityPaths%)
-
-	doctrine.annotationReader:
-		class: Doctrine\Common\Annotations\SimpleAnnotationReader
-		setup:
-			- addNamespace('Doctrine\\ORM\\Mapping')
-
-	doctrine.cachedAnnotationReader: Doctrine\Common\Annotations\CachedReader(@doctrine.annotationReader, @doctrine.cache)
+			- setMetadataDriverImpl(@self::newDefaultAnnotationDriver(%doctrine.entityPaths%, %doctrine.useSimpleAnnotationReader%))
 
 	doctrine.cache:
 		class: Doctrine\Common\Cache\ArrayCache
@@ -70,3 +60,4 @@ services:
 			- setMigrationsDirectory(%doctrine.migrations.directory%)
 			- setMigrationsNamespace(%doctrine.migrations.namespace%)
 			- setMigrationsTableName(%doctrine.migrations.tableName%)
+			- registerMigrationsFromDirectory(%doctrine.migrations.directory%)
