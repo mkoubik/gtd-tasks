@@ -3,6 +3,11 @@ parameters:
 		entityPaths: [ %appDir%/model/entities ]
 		proxyDir: %tempDir%/cache/_Doctrine.ORM.Proxy
 		autogenerateProxyClasses: %debugMode%
+		migrations:
+			name: Migrations
+			directory: %appDir%/migrations
+			namespace: DoctrineMigrations
+			tableName: doctrine_migration_versions
 
 services:
 	doctrine.entityManager:
@@ -53,3 +58,15 @@ services:
 	doctrine.consoleCommandSet:
 		class: NetteCli\DoctrineCommandSet
 		tags: [ NetteCli\CommandSet ]
+
+	doctrine.migrations.consoleCommandSet:
+		class: NetteCli\DoctrineMigrationsCommandSet
+		tags: [ NetteCli\CommandSet ]
+
+	doctrine.migrations.configuration:
+		class: Doctrine\DBAL\Migrations\Configuration\Configuration
+		setup:
+			- setName(%doctrine.migrations.name%)
+			- setMigrationsDirectory(%doctrine.migrations.directory%)
+			- setMigrationsNamespace(%doctrine.migrations.namespace%)
+			- setMigrationsTableName(%doctrine.migrations.tableName%)

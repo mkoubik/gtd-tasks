@@ -29,4 +29,14 @@ services:
 	routerFactory: App\RouterFactory
 	router: @routerFactory::createRouter
 
+	cli.helpers.dialog:
+		class: Symfony\Component\Console\Helper\DialogHelper
+		tags:
+			Symfony\Component\Console\Helper\HelperInterface: dialog
+
+	cli.helpers.formatter:
+		class: Symfony\Component\Console\Helper\FormatterHelper
+		tags:
+			Symfony\Component\Console\Helper\HelperInterface: formatter
+
 factories:

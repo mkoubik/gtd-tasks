@@ -1,5 +1,5 @@
 {
-    "hash": "a2716670b85cc788548397ab84e43257",
+    "hash": "c571a6196a8489189022b2f7e76d8061",
     "packages": [
         {
             "name": "doctrine/common",
@@ -134,17 +134,71 @@
             ]
         },
         {
+            "name": "doctrine/migrations",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/migrations",
+                "reference": "c1d875ce7d092dd1bc7508c3867b5c6b97431e43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/migrations/archive/c1d875ce7d092dd1bc7508c3867b5c6b97431e43.zip",
+                "reference": "c1d875ce7d092dd1bc7508c3867b5c6b97431e43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "doctrine/dbal": ">=2.0,<2.5.x-dev"
+            },
+            "require-dev": {
+                "symfony/console": "2.*",
+                "symfony/yaml": "2.*"
+            },
+            "suggest": {
+                "symfony/console": "to run the migration from the console"
+            },
+            "time": "1350643044",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL\\Migrations": "lib"
+                }
+            },
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Schema migrations using Doctrine DBAL",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "migrations"
+            ]
+        },
+        {
             "name": "doctrine/orm",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/doctrine2.git",
-                "reference": "46e6753649d078d31407844c211a3b339e137bdd"
+                "reference": "29f0b678cfb991e90af3eed023fb8c62ec8f7acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/doctrine2/archive/46e6753649d078d31407844c211a3b339e137bdd.zip",
-                "reference": "46e6753649d078d31407844c211a3b339e137bdd",
+                "url": "https://github.com/doctrine/doctrine2/archive/29f0b678cfb991e90af3eed023fb8c62ec8f7acf.zip",
+                "reference": "29f0b678cfb991e90af3eed023fb8c62ec8f7acf",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +210,7 @@
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
-            "time": "1353870808",
+            "time": "1354047252",
             "bin": [
                 "bin/doctrine",
                 "bin/doctrine.php"
@@ -333,6 +387,7 @@
     "stability-flags": {
         "nette/nette": 20,
         "doctrine/orm": 20,
+        "doctrine/migrations": 20,
         "nette/tester": 20
     }
 }

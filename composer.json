@@ -19,7 +19,8 @@
 	"require": {
 		"php": ">= 5.3.0",
 		"nette/nette": "@dev",
-		"doctrine/orm": "2.4.x-dev"
+		"doctrine/orm": "2.4.x-dev",
+		"doctrine/migrations": "@dev"
 	},
     "require-dev": {
         "nette/tester": "@dev"
