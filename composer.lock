@@ -1,0 +1,140 @@
+{
+    "hash": "0c575d893558a8f4d9007d4c4cad3432",
+    "packages": [
+        {
+            "name": "nette/nette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/nette/nette",
+                "reference": "de94e1498c0581fafa49b6aae5dc41c71f64f3ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/nette/nette/archive/de94e1498c0581fafa49b6aae5dc41c71f64f3ac.zip",
+                "reference": "de94e1498c0581fafa49b6aae5dc41c71f64f3ac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "ext-iconv": "*",
+                "ext-tokenizer": "*"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "suggest": {
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "ext-memcache": "*",
+                "ext-gd": "*",
+                "ext-fileinfo": "*"
+            },
+            "time": "1354027284",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "files": [
+                    "Nette/loader.php"
+                ]
+            },
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Framework - innovative framework for fast and easy development of secured web applications in PHP. Write less, have cleaner code and your work will bring you joy.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "templating",
+                "framework",
+                "database",
+                "dbal",
+                "debugging",
+                "mvc",
+                "micro",
+                "Forms",
+                "latte",
+                "neon",
+                "mailing",
+                "images"
+            ]
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "nette/tester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tester",
+                "reference": "00e7d36c529da6cb67786518bf20dbd19115e131"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/nette/tester/archive/00e7d36c529da6cb67786518bf20dbd19115e131.zip",
+                "reference": "00e7d36c529da6cb67786518bf20dbd19115e131",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "1354025528",
+            "bin": [
+                "Tester/tester"
+            ],
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "classmap": [
+                    "Tester/"
+                ]
+            },
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "An easy-to-use PHP Unit Testing framework.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "testing",
+                "nette",
+                "unit"
+            ]
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "nette/nette": 20,
+        "nette/tester": 20
+    }
+}
