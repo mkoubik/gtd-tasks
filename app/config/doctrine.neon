@@ -40,6 +40,12 @@ services:
 		setup:
 			- setNamespace(::md5(%doctrine.proxyDir%))
 
-	doctrine.entityManagerConsoleHelper: Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper
+	doctrine.entityManagerConsoleHelper:
+		class: Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper
+		tags:
+			Symfony\Component\Console\Helper\HelperInterface: em
 
-	doctrine.connectionConsoleHelper: Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper
+	doctrine.connectionConsoleHelper:
+		class: Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper
+		tags:
+			Symfony\Component\Console\Helper\HelperInterface: db
