@@ -1,6 +1,6 @@
 parameters:
 	doctrine:
-		entityPaths: [ %appDir%/model/entities ]
+		entityPaths: [ %appDir%/model/Domain ]
 		proxyDir: %tempDir%/cache/_Doctrine.ORM.Proxy
 		autogenerateProxyClasses: %debugMode%
 		useSimpleAnnotationReader: TRUE
