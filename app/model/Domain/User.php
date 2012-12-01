@@ -22,6 +22,16 @@ class User extends \Nette\Object
 
 	public function setPassword($password, $salt)
 	{
-		$this->passwordHash = crypt($password, $salt);
+		$this->passwordHash = $this->encryptPassword($password, $salt);
+	}
+
+	public function verifyPassword($password, $salt)
+	{
+		return $this->encryptPassword($password, $salt) == $this->passwordHash;
+	}
+
+	private function encryptPassword($password, $salt)
+	{
+		return crypt($password, $salt);
 	}
 }
