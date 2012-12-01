@@ -23,6 +23,6 @@
 		"doctrine/migrations": "@dev"
 	},
     "require-dev": {
-        "nette/tester": "@dev"
+        "phpunit/phpunit": "~3.7.9"
     }
 }
