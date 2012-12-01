@@ -1,23 +1,5 @@
 <?php
 
-require __DIR__ . '/../libs/autoload.php';
+$container = require __DIR__ . '/../app/bootstrap.php';
 
-if (!class_exists('Tester\Assert')) {
-	echo "Install Nette Tester using `composer update --dev`\n";
-	exit(1);
-}
-
-function id($val) {
-	return $val;
-}
-
-$configurator = new Nette\Config\Configurator;
-$configurator->setDebugMode(FALSE);
-$configurator->setTempDirectory(__DIR__ . '/../temp');
-$configurator->createRobotLoader()
-	->addDirectory(__DIR__ . '/../app')
-	->register();
-
-$configurator->addConfig(__DIR__ . '/../app/config/config.neon', FALSE);
-$configurator->addConfig(__DIR__ . '/../app/config/config.local.neon');
-return $configurator->createContainer();
+require_once __DIR__ . '/TestCase.php';
