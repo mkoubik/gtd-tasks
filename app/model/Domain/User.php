@@ -2,10 +2,17 @@
 
 namespace App\Model\Domain;
 
+/**
+ * @Entity
+ */
 class User extends \Nette\Object
 {
+	use Behaviors\Entity;
+
+	/** @Column(type="string") */
 	protected $login;
 
+	/** @Column(type="string") */
 	protected $passwordHash;
 
 	public function getPasswordHash()
