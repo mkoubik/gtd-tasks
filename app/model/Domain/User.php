@@ -3,7 +3,7 @@
 namespace App\Model\Domain;
 
 /**
- * @Entity
+ * @Entity(repositoryClass="App\Model\Repositories\Users")
  */
 class User extends \Nette\Object
 {

@@ -1,0 +1,4 @@
+services:
+	model.repositories.users:
+		class: App\Model\Repositories\Users
+		factory: @doctrine.entityManager::getRepository(App\Model\Domain\User)
