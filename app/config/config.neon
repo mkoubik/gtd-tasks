@@ -26,7 +26,6 @@ nette:
 
 
 services:
-	# authenticator: Model\Authenticator
 	routerFactory: App\RouterFactory
 	router: @routerFactory::createRouter
 

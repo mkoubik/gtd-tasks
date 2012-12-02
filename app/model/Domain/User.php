@@ -15,6 +15,16 @@ class User extends \Nette\Object
 	/** @Column(type="string") */
 	protected $passwordHash;
 
+	public function getLogin()
+	{
+		return $this->login;
+	}
+
+	public function setLogin($login)
+	{
+		$this->login = $login;
+	}
+
 	public function getPasswordHash()
 	{
 		return $this->passwordHash;
