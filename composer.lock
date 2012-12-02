@@ -1,5 +1,5 @@
 {
-    "hash": "47b2358034ff6d72d541042b00e9cdf2",
+    "hash": "f0670f62a089119d8fff3de076ce997f",
     "packages": [
         {
             "name": "doctrine/common",
@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "http://github.com/nette/nette",
-                "reference": "da95e0b202d9394f0b35cea6660dd239ca4ba4e6"
+                "reference": "a1595e18b64b7ac0e03a5b3cde214654806b8401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/nette/nette/archive/da95e0b202d9394f0b35cea6660dd239ca4ba4e6.zip",
-                "reference": "da95e0b202d9394f0b35cea6660dd239ca4ba4e6",
+                "url": "https://github.com/nette/nette/archive/a1595e18b64b7ac0e03a5b3cde214654806b8401.zip",
+                "reference": "a1595e18b64b7ac0e03a5b3cde214654806b8401",
                 "shasum": ""
             },
             "require": {
@@ -287,7 +287,7 @@
                 "ext-gd": "*",
                 "ext-fileinfo": "*"
             },
-            "time": "2012-12-01 18:58:50",
+            "time": "2012-12-01 22:32:32",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -382,6 +382,58 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "janmarek/mockista",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/janmarek/mockista",
+                "reference": "d2ccbd36eb50723df07aea7dbd1c3258ee2fb30c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/janmarek/mockista/archive/d2ccbd36eb50723df07aea7dbd1c3258ee2fb30c.zip",
+                "reference": "d2ccbd36eb50723df07aea7dbd1c3258ee2fb30c",
+                "shasum": ""
+            },
+            "time": "2012-11-07 18:57:42",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Mockista": ""
+                },
+                "files": [
+                    "Mockista/functions.php"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jiří Knesl",
+                    "homepage": "http://www.knesl.com/"
+                },
+                {
+                    "name": "Jan Marek",
+                    "homepage": "http://www.janmarek.net/"
+                }
+            ],
+            "description": "Mockista is library for mocking, which I've written, because I find mocking in PHPUnit awful.",
+            "homepage": "http://www.mockista.com/",
+            "keywords": [
+                "testing",
+                "phpunit",
+                "BDD",
+                "TDD",
+                "mock",
+                "tests",
+                "mockista",
+                "mocking"
+            ]
+        },
         {
             "name": "phpunit/php-code-coverage",
             "version": "1.2.6",
@@ -796,6 +848,7 @@
     "stability-flags": {
         "nette/nette": 20,
         "doctrine/orm": 20,
-        "doctrine/migrations": 20
+        "doctrine/migrations": 20,
+        "janmarek/mockista": 20
     }
 }
