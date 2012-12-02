@@ -4,7 +4,7 @@ namespace Test;
 
 class UserTest extends TestCase
 {
-	function testSetPassword()
+	public function testSetPassword()
 	{
 		$user = new \App\Model\Domain\User();
 		$user->setPassword('password', 'salt');
