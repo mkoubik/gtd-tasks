@@ -7,3 +7,5 @@ libs/*
 !.htaccess
 !web.config
 app/config/config.local.neon
+
+app.sublime-workspace
